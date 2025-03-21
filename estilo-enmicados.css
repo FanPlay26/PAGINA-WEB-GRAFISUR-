@@ -1,0 +1,216 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    top: 0; left: 0; right:0;
+    background: rgb(123, 255, 255);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+header .logo{
+    align-items: left;
+    font-size: 40px;
+
+
+}
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    border-top: 1px solid rgb(196, 196, 206);
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+header .navbar ul li a:hover{
+    background: black;
+    color: white;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgb(231, 231, 231);
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgb(196, 196, 206);
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+@media(max-width:1048px){
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 10%; left: 0; right: 0;
+        background: white;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background: rgb(219, 255, 255);
+    }
+
+#menu-bar:checked ~ .navbar{
+    display: initial;
+}
+}
+
+
+/*cuerpo*/
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: blue;
+    width: 270px;
+    height: 400px;
+    margin: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+.card-image{
+    background-color: aqua;
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+.enmicado1{
+    background-image: url(../img/enmicado-a3.jpg);
+}
+.enmicado2{
+    background-image: url(../img/enmicado-a4.jpg);
+}
+.enmicado3{
+    background-image: url(../img/enmicado-carne.jpg);
+}
+.enmicado4{
+    background-image: url(../img/enmicado-photo.jpg);
+}
+
+
+.card h2{
+    text-transform: none;
+    color: white;
+    padding: 10px;
+
+}
+.card p{
+    text-transform: none;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+
+/*pie de pagina*/
+
+
+
+.footer{
+    background-color: rgb(2, 7, 111);
+    padding: 80px;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-link{
+    width: 25%;
+    padding: 15px;
+}
+.footer-link h4{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    font-weight: 500px;
+    border-bottom: 2px solid;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.footer-link ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3 ease;
+}
+.footer-link ul li a:hover{
+    color: red;
+
+}
+@media (max-width:950px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-link{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
